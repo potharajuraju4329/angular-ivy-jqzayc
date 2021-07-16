@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'Raju',
-    loadChildren: './details/details.module#DetailsModule'
+    loadChildren: 'src/app/details.module#DetailsModule'
   },
   {
     path: '',
