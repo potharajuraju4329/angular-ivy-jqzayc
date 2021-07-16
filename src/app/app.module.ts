@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { WeatherService } from './common/weather.service';
 import { HttpClientModule } from '@angular/common/http';
-import { DetailsComponent } from './components/details/details.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HomeComponent, DetailsComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([])
+  ],
+  declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent],
   providers: [WeatherService]
 })

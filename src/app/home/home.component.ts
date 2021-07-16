@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherService } from '../../common/weather.service';
+import { Router } from '@angular/router';
+import { WeatherService } from '../common/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { WeatherService } from '../../common/weather.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherService: WeatherService, public router: Router) {}
   weatherDataArray: Array<any> = [];
   ngOnInit() {
     this.weatherService.loadWeatherData().subscribe(
@@ -24,6 +25,6 @@ export class HomeComponent implements OnInit {
   }
   clickMe() {
     alert('Bootstap working');
-    
+    this.router.navigate(['/customers']);
   }
 }
