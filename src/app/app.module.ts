@@ -6,15 +6,10 @@ import { AppComponent } from './app.component';
 import { WeatherService } from './common/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot([])
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent],
   providers: [WeatherService]

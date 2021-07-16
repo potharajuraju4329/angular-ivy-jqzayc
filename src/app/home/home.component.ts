@@ -25,6 +25,6 @@ export class HomeComponent implements OnInit {
   }
   clickMe() {
     alert('Bootstap working');
-    this.router.navigate(['/customers']);
+    this.router.navigate(['/details']);
   }
 }
